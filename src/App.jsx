@@ -1,11 +1,14 @@
 import './App.css'
-import Home from "./Pages/Home"
+import Home from './Pages/home'
+import Ideaform from './Pages/IdeaForm'
+import Test from './Pages/Test'
 
 function App() {
 
   return (
     <>
-      <Home/>
+      {/* <Ideaform/> */}
+      <Test/>
     </>
   )
 }
