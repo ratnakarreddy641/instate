@@ -82,49 +82,57 @@ const MultiStepForm = () => {
 
                 {step === 2 && (
                     <div>
-                        <section className="flex justify-center">
+                        <section className="flex flex-col items-center">
                             <div className="w-full md:w-1/2 p-4 flex flex-col">
                                 <label htmlFor="rel_links" className="block text-gray-700 font-medium mb-2">Related Links</label>
                                 <div className='flex mb-2 '>
                                     <input
-                                        className="w-full p-2 border rounded"
+                                        className="w-full p-2 border outline-none rounded"
                                         type="text"
                                         onChange={handleChange} value={formData.title} placeholder="https://"
                                     />
-                                    <FormControl sx={{  minWidth: 180 }} size="small">
-                                    <Select
-                                        labelId="demo-simple-select-label"
-                                        id="demo-simple-select"
-                                        onChange={handleChange}
+                                    <FormControl sx={{ minWidth: 180, outline: 0, border: 0 }} size="small">
+                                        <Select sx={{ outline: 0, border: 0 }}
+                                            labelId="demo-simple-select-label"
+                                            id="demo-simple-select"
 
-                                    >
-                                        <MenuItem value={10}>GitHub</MenuItem>
-                                        <MenuItem value={20}>Youtube</MenuItem>
-                                        <MenuItem value={30}>Blog/Hashnode</MenuItem>
-                                    </Select>
+                                            value={10}
+                                            onChange={handleChange}
+                                            inputProps={{ 'aria-label': 'Without label' }}
+
+                                        >
+                                            <MenuItem value={10}>GitHub</MenuItem>
+                                            <MenuItem value={20}>Youtube</MenuItem>
+                                            <MenuItem value={30}>Blog/Hashnode</MenuItem>
+                                        </Select>
                                     </FormControl>
+                                    
                                 </div>
                                 <div className='flex '>
                                     <input
-                                        className="w-full p-2 border rounded"
+                                        className="w-full p-2 border rounded outline-none"
                                         type="text"
                                         onChange={handleChange} value={formData.title} placeholder="https://"
                                     />
-                                    <FormControl sx={{  minWidth: 180 }} size="small">
-                                    <Select
-                                        labelId="demo-simple-select-label"
-                                        id="demo-simple-select"
-                                        onChange={handleChange}
-
-                                    >
-                                        <MenuItem value={10}>GitHub</MenuItem>
-                                        <MenuItem value={20}>Youtube</MenuItem>
-                                        <MenuItem value={30}>Blog/Hashnode</MenuItem>
-                                    </Select>
+                                    <FormControl sx={{ minWidth: 180 }} size="small">
+                                        <Select
+                                            labelId="demo-simple-select-label"
+                                            id="demo-simple-select"
+                                            onChange={handleChange}
+                                            value={30}
+                                        >
+                                            <MenuItem value={10}>GitHub</MenuItem>
+                                            <MenuItem value={20}>Youtube</MenuItem>
+                                            <MenuItem value={30}>Blog/Hashnode</MenuItem>
+                                        </Select>
                                     </FormControl>
                                 </div>
                             </div>
+                            <div className="w-full md:w-1/2 p-4 flex flex-col">
+                            <h1 className='block text-gray-700 font-medium mb-2'>What do you expect from instate community?</h1>
+                            </div>
                         </section>
+                        
                     </div>
                 )}
 
